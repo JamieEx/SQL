@@ -1,0 +1,22 @@
+CREATE TABLE candles (id INTEGER PRIMARY KEY,scent TEXT, size TEXT, price INTEGER, rating Integer);
+
+INSERT INTO candles VALUES 
+(1, "EA", "L", 30, 5),
+(2, "CT", "L", 30, 5),
+(3, "BO", "L", 25, 3),
+(4, "LAV", "M", 15, 4),
+(5, "WT", "S", 15, 2),
+(6, "NOEL", "L", 10, 4),
+(7, "SOB", "S", 15, 2),
+(8, "BTL", "L", 10, 3),
+(9, "CH", "M", 25, 1),
+(10,"LD", "S",30,4),
+(11, "FC", "L", 20,5),
+(12, "YAE", "S", 15, 5),
+(13, "VV", "S", 25,2),
+(14, "BB", "M", 20,1),
+(15, "CP", "M", 10,1);
+
+SELECT * FROM CANDLES WHERE PRICE >= 10  ORDER BY PRICE ASC;
+
+SELECT AVG(PRICE) FROM CANDLES GROUP BY(RATING)
